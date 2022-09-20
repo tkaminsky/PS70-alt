@@ -72,90 +72,78 @@
 
    <main id="main">
 
+
     <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up">
+            <h2>03: hand tools and fabrication</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Kinetic Sculpture</h3>
+            <p>This week, we were tasked with creating a kinetic sculpture. I was inspired by a <a href="https://youtu.be/iDwH6RhKByY?t=5">Japanese woodworker on Youtube</a>. I modelled a spiral in Fusion360 and was curious to see what it would look like before committing to laser cutting it so I created joints with the pieces and animated it!</p>
+          </div>
+          <div class="col-md-3" data-aos="fade-up">
+            <img src="03_mechanical/wheel_sketch.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-5" data-aos="fade-up">
+            <img src="03_mechanical/kinetic_animation.gif" alt="Image" class="img-fluid">
           </div>
         </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-8 align-items-center">
+          <div class="col-md-4" data-aos="fade-up">
+            <p>I went through a lot of trial and error to figure out how to attach the spiral to the dowel and motor and making sure the pieces weren't too tight/loose. I then attached the motor to see if it could actually turn the spiral -  it worked!</p>
+            <p>I also added another piece to the inside of the axel to prevent the dowel from sliding outwards when it spins.</p>
+          </div>
+          <div class="col-md-4" data-aos="fade-up">
+            <img src="03_mechanical/wheeltest.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-4" data-aos="fade-up">
+            <img src="03_mechanical/motor1.png" width="360" alt="Image" class="img-fluid">
+          </div>
+        </div>
+
+      <div class="container">
+        <div class="row mb-8 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+           <p><br>Because I wanted the spirals to rotate in opposite directions, I had to use two motors. I realized that if the spirals are too close to the side panel, then it would be hard to see the illusion effect straight on or from an angle, so I increased the length of the dowel. After asssembling all the pieces, I connected both motors to a breadboard and then hooked them up to the power supply.</p>
+          </div>
+          <div class="col-md-3" data-aos="fade-up">
+            <img src="03_mechanical/wheel4.JPG" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-3" data-aos="fade-up">
+            <img src="03_mechanical/wheel8.JPG" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-3" data-aos="fade-up">
+            <img src="03_mechanical/wheelgif2.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-3" data-aos="fade-up">
+            <img src="03_mechanical/wheelgif3.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-12" data-aos="fade-up">
+            <h3 class="h3"><br>Improvements</h3>
+            <p>Because the motor was attached freely to the axel, it would wiggle around a lot or fall off if I increased the voltage too much. In the next iteration, I would add a structure to the outside of the side panel to secure the motor in place. I'd also add a potentiometer to the circuit and connect it to an Arduino so I can power it using my laptop or a battery.</p>
+            <p>Another area of improvement is to bring the two spirals closer together by making the base piece a bit shorter. I secured the dowels and frame pieces before I attached the spiral, so by the time I realized they were too far apart, it was too late to change the dowel or shorten the frame. Next time I'll know to test-assmeble everything before securing them in place!</p>
+          </div>
+      </div>
+
+
+
+
+
     </section>
 
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
-      <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
 
   </main><!-- End #main -->
-  
+
 
   <!-- ======= Footer ======= -->
   <footer class="footer" role="contentinfo">
