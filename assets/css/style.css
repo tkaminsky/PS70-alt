@@ -627,6 +627,37 @@ figcaption {
   outline: none;
 }
 
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.button {
+  background-color: white;
+  border: 2px solid #0d1e2d;
+  border-radius: 4px;
+  color: #0d1e2d;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button {
+  transition-duration: 0.2s;
+}
+
+.button:hover {
+  background-color: white;
+  border: 2px solid #949494;
+  border-radius: 4px;
+  color: #949494;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
