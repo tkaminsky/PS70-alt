@@ -131,8 +131,8 @@
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
             <h2>Arduino code</h2>
             <pre><code class="language-arduino">
-#include "LiquidCrystal.h"
-#include "Servo.h"
+#include <LiquidCrystal.h>
+#include <Servo.h>
 
 Servo myservo; 
 
@@ -153,11 +153,10 @@ void loop(){
   val = digitalRead(inputPin);  // read input value
   if (val == HIGH) {            // check if the input is HIGH
     if (pirState == LOW) {
-      // we have just turned on
-      Serial.println("Motion detected!");      // print on LCD display
+      Serial.println("Motion detected!");      
       lcd.clear(); // Clears the display 
       lcd.setCursor(0,1); 
-      lcd.print("Motion detected!");// change the text to change the text
+      lcd.print("Motion detected!");  // print on LCD display
       for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees in steps of 1 degree
         myservo.write(pos);  
         delay(15);  
@@ -170,10 +169,10 @@ void loop(){
     }
 
     else {
-      Serial.println("Motion continued");      // print on LCD display
+      Serial.println("Motion continued"); 
       lcd.clear(); // Clears the display 
       lcd.setCursor(0,1); 
-      lcd.print("Motion continued!");// change the text to change the text
+      lcd.print("Motion continued!"); // prnit on LCD display
       for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees in steps of 1 degree
         myservo.write(pos);  
         delay(15);  
@@ -188,11 +187,11 @@ void loop(){
   
   else {
     if (pirState == HIGH){
-      Serial.println("Motion ended!"); // prpint on LCD display
+      Serial.println("Motion ended!");
       lcd.clear(); // Clears the display 
       lcd.setCursor(0,1); 
       delay(150);// Sets the location at which subsequent text written to the LCD will be displayed 
-      lcd.print("Motion ended!");// change the text to change the text
+      lcd.print("Motion ended!");// print on LCD display
       pirState = LOW;
     }
   }
