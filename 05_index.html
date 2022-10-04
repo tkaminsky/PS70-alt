@@ -24,6 +24,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css" rel="stylesheet" >
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
 
   <!-- =======================================================
   * Template Name: MyPortfolio - v4.9.0
@@ -75,85 +79,129 @@
     <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>05: microcontroller programming</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Tinkering with Arduino</h3>
+            <p>This week we were tasked with building something with an Arduino. I used a few different inputs and outputs but the premise was simple:<br>
+              <li>I'd wave infront of a gesture sensor and the LCD would display "motion detected" and the servo motor would rotate.</li>
+              <li>If I continued waving, the LCD would display "Motion continued"</li>
+              <li>If I stopped waving, the LCD would display "Motion ended" and the servo motor would cease rotating.</li>
+            </p>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50">
+            <h4 class="h4">Equipment</h3>
+              <li>1x Adafruit Metro 328</li>
+              <li>1x PIR motion sensor HC-SR501</li>
+              <li>1x LCD 16x2</li>
+              <li>1x Breadboard trim potentiometer - 10K</li>
+              <li>1x Micro servo</li>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
 
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="05_microcontrollers/circuitdrawing.jpg" alt="Image" class="img-fluid">
+            <figcaption>PIN 5 - SERVO MOTOR<br>
+              PIN 7,8,9,10,11,12 - LCD DISPLAY<br>
+            </figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <video width="480" controls>
+              <source src="05_microcontrollers/arduino.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>Arduino code</h2>
+            <pre><code class="language-arduino">
+#include "LiquidCrystal.h"
+#include "Servo.h"
+
+Servo myservo; 
+
+LiquidCrystal lcd(7,8,9,10,11,12); // Creates an LC object. Parameters: (rs, enable, d4, d5, d6, d7) 
+int inputPin = 3;               // choose the input pin (for PIR sensor)
+int pirState = LOW;             // we start, assuming no motion detected
+int val = 0;                    // variable for reading the pin status
+int pos = 0;                    // start position for servo motor
+
+void setup() {
+  pinMode(inputPin, INPUT);     // declare sensor as input
+  lcd.begin(16,2); // Initializes the interface to the LCD screen, and specifies the dimensions (width and height) of the display
+  myservo.attach(5);  // attaches the servo on pin 5 to the servo object
+  Serial.begin(9600);
+}
+ 
+void loop(){
+  val = digitalRead(inputPin);  // read input value
+  if (val == HIGH) {            // check if the input is HIGH
+    if (pirState == LOW) {
+      // we have just turned on
+      Serial.println("Motion detected!");      // print on LCD display
+      lcd.clear(); // Clears the display 
+      lcd.setCursor(0,1); 
+      lcd.print("Motion detected!");// change the text to change the text
+      for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees in steps of 1 degree
+        myservo.write(pos);  
+        delay(15);  
+        }
+      for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
+        delay(15);                       // waits 15ms for the servo to reach the position
+        }
+      pirState = HIGH;
+    }
+
+    else {
+      Serial.println("Motion continued");      // print on LCD display
+      lcd.clear(); // Clears the display 
+      lcd.setCursor(0,1); 
+      lcd.print("Motion continued!");// change the text to change the text
+      for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees in steps of 1 degree
+        myservo.write(pos);  
+        delay(15);  
+        }
+      for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
+        delay(15);                       // waits 15ms for the servo to reach the position
+        }
+      }
+      pirState = HIGH;
+    }
+  
+  else {
+    if (pirState == HIGH){
+      Serial.println("Motion ended!"); // prpint on LCD display
+      lcd.clear(); // Clears the display 
+      lcd.setCursor(0,1); 
+      delay(150);// Sets the location at which subsequent text written to the LCD will be displayed 
+      lcd.print("Motion ended!");// change the text to change the text
+      pirState = LOW;
+    }
+  }
+}
+              </code>
+            </pre>
+        </div>
+      </div>
+
+    </section>
   </main><!-- End #main -->
   
 
