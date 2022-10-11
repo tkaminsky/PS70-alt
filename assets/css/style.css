@@ -42,13 +42,27 @@
 @font-face {
   font-family: "GTAmerica";
   src: url("fonts/GT-America/GT-America-Mono-Medium.otf") format("opentype");
-  font-weight: bold;
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GTAmerica";
   src: url("fonts/GT-America/GT-America-Mono-Medium-Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GTAmerica";
+  src: url("fonts/GT-America/GT-America-Mono-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GTAmerica";
+  src: url("fonts/GT-America/GT-America-Mono-Bold-Italic.otf") format("opentype");
   font-weight: bold;
   font-style: italic;
 }
@@ -494,6 +508,12 @@ pre code {
   display: block;
   padding: 20px;
 }
+
+table, th, td {
+  border: 1px solid #0d1e2d;
+  padding: 8px 12px 8px 12px;
+}
+
 
 /*--------------------------------------------------------------
 # Header

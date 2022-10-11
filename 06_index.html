@@ -70,90 +70,446 @@
 
   <!-- ======= Main Content======= -->
 
-   <main id="main">
+    <main id="main">
 
     <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>06: sensors and electronic input devices</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
       <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p><a href="https://rebeccabrand.github.io/ps-70-fall-22/week-6.html">Rebecca Brand</a> and I collaborated to build & test a moisture sensor and compare them with two other sensors in the lab. We have a shared inability to keep houseplants alive as we either over or under water them. We thought this would be an educational and fun way to both learn about capacitive sensors and figure out how much/little water to give our plants to keep them alive. The sensors we experimented with include: a water level sensor, a soil moisture sensor, a DIY soil moisture sensor, and a photoresistor (for something different.)</p>
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+      <!-- ======= Water Sensor ======= -->
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4>1. Water level sensor</h4>
+            <p>The first sensor I tried was a <a href="https://arduinogetstarted.com/tutorials/arduino-water-sensor">water level sensor</a>. The sensor has 5 power traces and 5 sense traces which are interlaced in parallel. The traces act as a variable resistance, and the resistance is inversely proprotional to the height of the water. i.e., the more water the sensor is immersed in, the lower the resistance, and vice versa.</p>
+            <p>Usually, I would connect the sensor's VCC and GND pins to the Arduino's 5V and GND pins, repsectively. However for this sensor, it was recommended to connect the VCC pin to a digital pin because if power is constantly provided to the sensor via the VCC pin, it could make the sensor eletrochemically corrode faster.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+              <img src="06_sensors/diagram_watersensor1.jpeg" alt="Image" class="img-fluid">
+            <figcaption>            
+              - --> GND<br>
+              + --> PIN 7<br>
+              S --> A5
+            </figcaption>
+          </div>
+        </div>
+      </div>
 
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>When the sensor not in water, the serial monitor prints "0". When the sensor is placed in water, it prints values >0.</p>
+            <p>A limitation of this senesor is that it measures water <i>levels</i>, not moisture. i.e., the maximum height of the water that can be detected is equal to the height of the sensor. This could be useful to detect something like water leakage, but not so useful for measure soil moisture.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/waterlevelsensor.gif" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
 
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>That said, when I was using the water sensor I didn't realize it measured water levels instead of moisture levels. So, I did put it into soil to see if it could detect any changes before and after watering my plant - and it did!</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/waterlevelssensor1_dry.jpg" alt="Image" class="img-fluid">
+            <figcaption>DRY SOIL SERIAL MONITOR READING: 0</figcaption>
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/waterlevelssensor1_wet.jpg" alt="Image" class="img-fluid">
+            <figcaption>WET SOIL SERIAL MONITOR READING: ~ 390</figcaption>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino">
+#define POWER_PIN  7
+#define SIGNAL_PIN A5
+
+int value = 0; // variable to store the sensor value
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(POWER_PIN, OUTPUT);   // configure D7 pin as an OUTPUT
+  digitalWrite(POWER_PIN, LOW); // turn the sensor OFF
+}
+
+void loop() {
+  digitalWrite(POWER_PIN, HIGH);  // turn the sensor ON
+  delay(10);                      // wait 10 milliseconds
+  value = analogRead(SIGNAL_PIN); // read the analog value from sensor
+  digitalWrite(POWER_PIN, LOW);   // turn the sensor OFF
+
+  Serial.print("Sensor value: ");
+  Serial.println(value);
+
+  delay(1000);
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>           
+
+
+      <!-- ======= Soil Moisture Sensor======= -->
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4>2. Soil moisture sensor</h4>
+            <p>The next sensor we tested was a fork-shaped <a href="https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-soil-moisture-sensor-ce769b">soil moisture sensor</a>, which
+             measures electrical resistance between the two electrodes of the sensor. Similar to the water level sensor, if there is more water in the soil, there is better conductivity and thus lower resistance, and vice versa. There is also a comparator that connects the sensor to the Arduino; it takes the analog output from the from the sensor, digitizes it, and then sends it to the digital output of the Arduino. I also added an LED so that the LED turns on if the moisture level went below a specified threshold value, which in this case was 300.</p>
+             <p>I recorded the values for when I placed the sensor in: air, wet soil (we already watered the plant by the time we got to this sensor, so we didn't get the dry soil measurement), and a cup of water. The light only turned on when it was submerged in water whcih makes sense as that condition that the highest conductivity, and thus the least resistance/lower number.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/diagram_moisturesensor.jpg" alt="Image" class="img-fluid">
+            <figcaption>            
+              <b>Arduino --> Comparator</b><br>
+              3V --> VCC<br>
+              GND --> GND<br>
+              A0 --> A0<br>
+
+              <b>Comparator --> Sensor</b><br>
+              + --> +<br>
+              - --> -<br>
+
+              <b>Arduino --> LED</b><br>
+              D13 --> +<br>
+              GND --> -
+            </figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/soilmoisture_resized.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <table>
+              <tr>
+                <th>Condition</th>
+                <th>Serial Monitor Value</th>
+              </tr>
+              <tr>
+                <td>Exposed to air only</td>
+                <td>663</td>
+              </tr>
+              <tr>
+                <td>Wet soil</td>
+                <td>574</td>
+              </tr>
+              <tr>
+                <td>Submerged in water</td>
+                <td>273</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/graph_soilmoisture.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino">
+/int sensorPin = A0; 
+int sensorValue;  
+int limit = 300; 
+
+void setup() {
+ Serial.begin(9600);
+ pinMode(13, OUTPUT);
+}
+
+void loop() {
+
+ sensorValue = analogRead(sensorPin); 
+ Serial.println("Analog Value : ");
+ Serial.println(sensorValue);
+ 
+ if (sensorValue < limit) {
+ digitalWrite(13, HIGH); 
+ }
+ else {
+ digitalWrite(13, LOW); 
+ }
+ 
+ delay(1000); 
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>           
+
+
+
+      <!-- ======= DIY Sensor======= -->
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4>3. DIY Soil moisture sensor</h4>
+            <p>The DIY "soil moisture" sensor uses tx-rx (transmit-receive) sensing sketch we learned in class. I laser-cutted a two-pronged sensor - similar to the soil moisture sensor previously described - using 1/4" acrylic and wrapped copper tape around each prong. I then connected alligator clips from each prong to analog pin A3 and digital pin 4.</p>
 
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="" alt="Image" class="img-fluid">
+            <figcaption>SCHEMATIC TO BE ADDED
+            </figcaption>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
 
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/capacitorDIY1.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/capacitorDIY2.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/capacitorDIY3.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <p>This time, I added 10mL of water at a time to better understand the rate of change of the capacitive values read through the Arduino. I noticed that once I was added ~30mL of water, adding more water to the soil didn't increase the value read out by the Serial Monitor by much more. i.e., putting the sensor in soil with 60mL of water vs. submerging the sensor in a cup of water both gave a reading of ~102000.</p>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <table>
+              <tr>
+                <th>Condition</th>
+                <th>Serial Monitor Value</th>
+              </tr>
+              <tr>
+                <td>Exposed to air only</td>
+                <td>12000</td>
+              </tr>
+              <tr>
+                <td>Dry soil</td>
+                <td>18500</td>
+              </tr>
+              <tr>
+                <td>Soil + 10mL water</td>
+                <td>25000</td>
+              </tr>
+              <tr>
+                <td>Soil + 20mL water</td>
+                <td>65000</td>
+              </tr>
+              <tr>
+                <td>Soil + 30mL water</td>
+                <td>101000</td>
+              </tr>
+              <tr>
+                <td>Soil + 60mL water</td>
+                <td>102000</td>
+              </tr>
+              <tr>
+                <td>Submerged in water</td>
+                <td>102000</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/graph_DIYsensor.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino">
+long result;   //variable for the result of the tx_rx measurement.
+int analog_pin = A3;
+int tx_pin = 4;
+
+void setup() {
+    pinMode(tx_pin, OUTPUT);      //Pin 4 provides the voltage step
+    Serial.begin(9600);
+}
+
+void loop() {
+    result = tx_rx();
+    Serial.println(result);
+}
+
+
+long tx_rx(){         // Function to execute rx_tx algorithm and return a value
+                      // that depends on coupling of two electrodes.
+                      // Value returned is a long integer.
+  int read_high;
+  int read_low;
+  int diff;
+  long int sum;
+  int N_samples = 100;    // Number of samples to take.  Larger number slows it down, but reduces scatter.
+
+  sum = 0;
+
+  for (int i = 0; i < N_samples; i++){
+   digitalWrite(tx_pin,HIGH);              // Step the voltage high on conductor 1.
+   read_high = analogRead(analog_pin);     // Measure response of conductor 2.
+   delayMicroseconds(100);                 // Delay to reach steady state.
+   digitalWrite(tx_pin,LOW);               // Step the voltage to zero on conductor 1.
+   read_low = analogRead(analog_pin);      // Measure response of conductor 2.
+   diff = read_high - read_low;            // desired answer is the difference between high and low.
+   sum += diff;                            // Sums up N_samples of these measurements.
+ }
+  return sum;
+}                                          // End of tx_rx function.
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>           
+
+
+      <!-- ======= Comparison ======= -->
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50">
+            <h4>Comparison</h4>
+            <p>If I could test these sensors again, I would have tested them in all of the same conditions (i.e., air, dry soil, soil + x mL of water, andsubmerged in water) and then mapped the values to the same range to more easily compare the differences. However, since we used the sensors across different time periods, so we weren't able to do so. That said, here's a chart that compares of the values we did manage to measure in the same conditions.</p>
+            <p>Two things to note: first, as mentioned, the water level sensor is meant to measure water level height, not moisture levels. Second, while both the water level sensor and DIY sensor values increase as resistance decreases (i.e., more water -> higher value), the inverse is true for the soil moisture sensor (i.e., more water -> lower value).</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <table>
+              <tr>
+                <th>Condition</th>
+                <th>Air only</th>
+                <th>Wet soil</th>
+                <th>Submerged in water</th>
+              </tr>
+              <tr>
+                <th>Water level sensor</th>
+                <td>0</td>
+                <td>390</td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <th>Soil moisture sensor</th>
+                <td>663</td>
+                <td>574</td>
+                <td>273</td>
+              </tr>
+              <tr>
+                <th>DIY sensor sensor</th>
+                <td>12000</td>
+                <td>25000</td>
+                <td>102000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- ======= Photoresistor ======= -->
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4>4. *BONUS* Photoresistor</h4>
+            <p>I wanted measure something other than water, so I tried using a <a href="https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-photoresistor-46c5eb">photoresistor</a>, whos resistivity varies according to the amount of light received. The setup was fairly simple and I decided to add an LED to the circuit so that if the value went below a certain threshold, the LED would light up.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/diagram_photoresistor.jpg" alt="Image" class="img-fluid">
+            <figcaption>First pin --> 5V<br>
+              Second pin --> A0<br>
+              Second pin --> GND
+            </figcaption>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50">
+            <p>As you may have noticed from the schematic and the Arduino code, this setup is very similar to the setup for the soil moisture sensor. In both cases, a value is read from an analog pin. For the soil moisture sensor, when the moisture levels increase, resistance decreases. For the photoresistor, when light increases, resistance decreases. I thought it was interesting that while the sensors measured different physical quantities, they followed the same principles.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50">
+            <img src="06_sensors/photoresistor.gif" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino">
+int sensorPin = A0; 
+int sensorValue;  
+int limit = 300; 
+
+void setup() {
+ Serial.begin(9600);
+ pinMode(2, OUTPUT);
+}
+
+void loop() {
+
+ sensorValue = analogRead(sensorPin); 
+ Serial.println("Analog Value : ");
+ Serial.println(sensorValue);
+ 
+ if (sensorValue>limit) {
+ digitalWrite(2, HIGH); 
+ }
+ else {
+ digitalWrite(2, LOW); 
+ }
+ 
+ delay(250); 
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>           
+
+    </section>
   </main><!-- End #main -->
   
 
