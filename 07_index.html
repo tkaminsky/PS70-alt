@@ -72,87 +72,186 @@
 
    <main id="main">
 
+
     <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>07: electronic output devices</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">1. Transistor and motor</h3>
+            <p>Transistors can be used to to control the flow of a high-current circuit from a low-current source. For this circuit, I used a IRL214 N-Channel MOSFET transistor and a potentiometer to control the speed of a motor.
+            </p>
+            <p>I attached a motor to the collector (or drain) of the transistor. Most motors require more current than the Arduino can supply, so you can add a separate power supply. In my case, it wasn't necessary to add another power supply. However, I did notice that the transistor + potentiometer combination enabled me to control the speed of the motor a lot more smoothly than if I just used the potentiometer on its own.</p>
+            <img src="07_outputs/schematic_transistor.png" alt="Image" class="img-fluid">
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50">
+            <video width="400" controls>
+              <source src="07_outputs/transistor.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino">
+const int transistorPin = 9;    // connected to the base of the transistor
+ 
+ void setup() {
+   // set  the transistor pin as output:
+   pinMode(transistorPin, OUTPUT);
+ }
+ 
+ void loop() {
+   // read the potentiometer:
+   int sensorValue = analogRead(A0);
+   // map the sensor value to a range from 0 - 255:
+   int outputValue = map(sensorValue, 0, 1023, 0, 255);
+   // use that to control the transistor:
+   analogWrite(transistorPin, outputValue);
+ }
+              </code>
+            </pre>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">2. Ultrasonic sensor and RGB LED</h3>
+            <p>For the main assignment, I programmed a microcontroller so the RGB LED starts off in an OFF state. When you bring an object within 4-8cm of the ultrasonic sensor, the LED turns ON into a magenta colour. When you bring the object within 0-4cm of the sensor, the LED turns into a green colour.
+            </p>
+            <img src="07_outputs/schematic_REGLED.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50"></div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50">
+            <video width="400" controls>
+              <source src="07_outputs/rgbLED.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino">
+#define echoPin 2 // attach pin D2 Arduino to pin Echo of HC-SR04
+#define trigPin 3 //attach pin D3 Arduino to pin Trig of HC-SR04
+
+int red_light_pin= 11;
+int green_light_pin = 10;
+int blue_light_pin = 9;
+long duration; // variable for the duration of sound wave travel
+int distance; // variable for the distance measurement
+
+void setup() {
+  pinMode(red_light_pin, OUTPUT);
+  pinMode(green_light_pin, OUTPUT);
+  pinMode(blue_light_pin, OUTPUT);
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an OUTPUT
+  pinMode(echoPin, INPUT); // Sets the echoPin as an INPUT
+  Serial.begin(9600); // // Serial Communication is starting with 9600 of baudrate speed
+}
+void loop() {
+    // Clears the trigPin condition
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration = pulseIn(echoPin, HIGH);
+  // Calculating the distance
+  distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+  // Displays the distance on the Serial Monitor
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance >= 8) {
+    RGB_color(0, 0, 0);// off
+  }
+  else if (distance >=4 && distance <8) {
+    RGB_color(100, 0, 100); // magenta
+  }
+  else if (distance <4) {
+    RGB_color(0, 250, 0); // green
+  }
+}
+void RGB_color(int red_light_value, int green_light_value, int blue_light_value)
+ {
+  analogWrite(red_light_pin, red_light_value);
+  analogWrite(green_light_pin, green_light_value);
+  analogWrite(blue_light_pin, blue_light_value);
+}
+              </code>
+            </pre>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4 class="h4">Oscilloscope</h4>
+            <p>Since the LED only turned on when an object was within a specific distance of the ultrasonic sensor, it is not on a fixed clock. As you can see in the code, the RGB values for the magenta-coloured light are 100, 0, 100. So, when I connected the red and blue data pins of the LED to the oscilloscope, the signal showed an increase in voltage when the LED turned magenta. When I connected the green data pin of the LED, there was no increase in voltage when the LED turned magenta.
+            </p>
+            <p>Conversely, the RGB values for the green-coloured light are 0, 250, 0. So, when I connected the red and blue data pins of the LED to the oscilloscope, the signal didn't change when the LED turned green. When I connected the green data pin of the LED, there was an increase in voltage of almost 5V when the LED turned magenta.</p>
+            <p>When my hand was further than 8cm away from the ultrasonic, the LED was off so the signal stayed at 0V.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="07_outputs/R_magenta.jpg" alt="Image" class="img-fluid">
+            <figcaption>R channel - voltage increased when LED is magenta</figcaption>
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="07_outputs/R_green.jpg" alt="Image" class="img-fluid">
+            <figcaption>R channel - no change in voltage when LED is green</figcaption>
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="07_outputs/G_magenta.jpg" alt="Image" class="img-fluid">
+            <figcaption>G channel - no change in voltage when LED is magenta</figcaption>
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="07_outputs/G_green.jpg" alt="Image" class="img-fluid">
+            <figcaption>G channel - voltage increased when LED is green</figcaption>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="07_outputs/B_magenta.jpg" alt="Image" class="img-fluid">
+            <figcaption>B channel - voltage increased when LED is magenta</figcaption>
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="07_outputs/B_green.jpg" alt="Image" class="img-fluid">
+            <figcaption>B channel - no change in voltage when LED is green</figcaption>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
   </main><!-- End #main -->
   
