@@ -77,7 +77,7 @@
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up">
             <h2>08: CNC milling, molding and casting</h2>
-            <p>This week's assignments were a struggle for so many reasons. Each assignment took several iterations. So, this week's documentation is more of a documentation of my various fails...but hey, at least I learned a lot from them!</p>
+            <p>This week's assignments were a struggle for so many reasons. So, this week's documentation is more of a documentation of my various fails...but hey, at least I learned a lot from them!</p>
           </div>
         </div>
       </div>
@@ -224,7 +224,7 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p>Instead, I tried to do pocket cuts for all the curves. I also encountered issues here as some the curves were so close together that either the toolpath couldn't be calculated again, or I would lose so much detail that almost nothing would be cut. After hours of troubleshooting, I discovered that the solution was to get the machine to cut <i>on</i> the path as opposed to outside / inside the path. After securing a piece of OSB using the nail gun (which was oddly satisfying to use), I finally did my first test cut!</p>
+            <p>Instead, I tried to do pocket cuts for all the curves. I also encountered issues here as some the curves were so close together that either the toolpath couldn't be calculated again, or I would lose so much detail that almost nothing would be cut. After hours of troubleshooting, I discovered that the solution was to get the machine to cut <i>on</i> the path as opposed to outside / inside the path. I set the cut depth for the inner paths to 7mm. After securing a piece of OSB using the nail gun (which was oddly satisfying to use), I finally did my first test cut!</p>
           </div>
          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
             <img src="08_CNC/bear_nail.jpg" alt="Image" class="img-fluid">
@@ -238,14 +238,36 @@
         </div>
       </div>
 
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>If you look closely, you'll see that while some of the inner profile cuts worked, most of the middle part of the bear ended up being a mess. The lines were too close together so the machine ended up taking out huge chunks of wood. </p>
+            <p>To remedy this, I spent some time simplifying the design even further in Rhino. I deleted, shrunk, and reoriented the curves and then did a second test cut with a 3mm cut depth. It's a bit difficult to see in the image below because of the texture of the OSB, but this version turned out a lot better. Most of the details were retained - yay! This cut also took approx. 1/3 of the time of the first test cut since I reduced the cut depth.</p>
+          </div>
+         <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="08_CNC/bear_aspire2.jpg" alt="Image" class="img-fluid">
+          </div>
+         <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="08_CNC/bear_testcut3.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
 
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p><center>BEAR SAGA TO BE CONTINUED...</center></p>
+            <p>After a relatively succesful test cut, I was ready to do the final cut on plywood. I used ~19mm (0.75") plywood - I'm more comfortable working in metric but I realized that inches might've been easier to work with in this case. Also, I measured the plywood after I nailed it onto the bed and thought it was 17mm. Unfortunately, when I ran the ShopBot, the outline profile cut didn't cut completely through the wood, so I created a new file with just the outline, set the depth to 19mm, and ran the cut again. In retrospect, I probably should've used a caliper to get a precise measurement of the wood thickness before securing it onto the bed. Noted for next time!</p>
+            <p>For the final cut, I used a cut depth of 4mm for the inner detail. Although the final cut isn't quite the same as my original vision, I'm still super happy with the way it turned out! (especially considering I almost gave up on this design altogether...) There was some sawdust stuck in the cuts even after I vacuumed it, so I took a screwdriver and tried to get the sawdust out. I also sanded down the edges so there weren't any dangerous wood splints sticking out. I also want to paint the surface black so the "engraved" parts are more obvious but I wasn't able to find black paint in the lab that night. Will attempt again another day!</p>
           </div>
-
+         <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="08_CNC/bear_finalcut1.jpg" alt="Image" class="img-fluid">
+          </div>
+         <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <img src="08_CNC/bear_finalcut2.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div>
       </div>
+
 
   </main><!-- End #main -->
   
