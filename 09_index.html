@@ -75,84 +75,58 @@
     <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>09: radio, wifi, bluetooth (IoT)</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>This week's assignment was to program a microcontroller to obtain and respond to information from the internet/radio, with at least one input and output. I collaborated with <a href="https://rebeccabrand.github.io/ps-70-fall-22/index.html">Rebecca Brand</a> this week to tackle the idiosyncracies of Arduino.</p>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+
+   <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">1. Simple Wifi Server</h3>
+            <p>We started by setting up a <a href="https://nathanmelenbrink.github.io/lab/networking/huzzah1.html">Wifi Server</a> so we could control our ESP32 board over wifi. We were able to set it up so that we were able to turn an LED on/off by clicking on the links in our browser.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50"></div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="09_IoT/simplewifi.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+
+   <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">2. Firebase + LED</h3>
+            <p> We followed <a href="https://nathanmelenbrink.github.io/lab/networking/huzzah1b.html">this tutorial</a> to control an LED through a Firebase Server.</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <video width="600" controls>
+              <source src="09_IoT/LED_firebase.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <figcaption>Turn LED on/off by setting value of string to "ON" or "OFF" in Firebase Realtime Database.</figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <video width="600" controls>
+              <source src="09_IoT/LED_UI.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <figcaption>Turn LED on/off by clicking "Turn On" or "Turn Off".</figcaption>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
   </main><!-- End #main -->
   
