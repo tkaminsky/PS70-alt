@@ -96,7 +96,7 @@
    <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <h3 class="h3">1. Simple Wifi Server</h3>
+            <h3 class="h3">1. Simple Wifi Server with ESP32</h3>
             <p>We started by setting up a <a href="https://nathanmelenbrink.github.io/lab/networking/huzzah1.html">Wifi Server</a> so we could control our ESP32 board over wifi. We were able to set it up so that we were able to turn an LED on/off by clicking on the links in our browser.</p>
           </div>
           <div class="col-md-1" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50"></div>
@@ -110,7 +110,7 @@
    <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <h3 class="h3">2. Firebase + LED</h3>
+            <h3 class="h3">2. Firebase + ESP32 + LED</h3>
             <p> We followed <a href="https://nathanmelenbrink.github.io/lab/networking/huzzah1b.html">this tutorial</a> to control an LED through a Firebase Server.</p>
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
@@ -125,7 +125,7 @@
               <source src="09_IoT/LED_UI.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video>
-            <figcaption>Turn LED on/off by clicking "Turn On" or "Turn Off".</figcaption>
+            <figcaption>Turn LED on/off by clicking the "Turn On" or "Turn Off" button.</figcaption>
           </div>
         </div>
       </div>
@@ -195,7 +195,22 @@ void loop() {
    <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p>Finally, we tried to connect the the ESP32 and stepper motor to Firebase so that we could control the motor over Wifi. [Details to come...]</p>
+            <h3 class="h3">4. Firebase + ESP32 + Stepper Motor</h3>
+            <p>Finally, we tried to connect the the ESP32 and stepper motor to Firebase so that we could control the motor over Wifi. It worked! We'll likely build on this prototype over the next few weeks and incorporate it into the "machine building" assignment and ultimately our final project.</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <video width="600" controls>
+              <source src="09_IoT/stepper_firebase.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <figcaption>Turn stepper motor on/off by setting value of string to "ON" or "OFF" in Firebase Realtime Database. Note that the syringe wasn't depressed in this video because we didn't line the gears up properly.</figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <video width="600" controls>
+              <source src="09_IoT/stepper_UI.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <figcaption>Turn stepper motor on/off by clicking the "Turn On" or "Turn Off" button. The syringe dispenser works!</figcaption>
           </div>
         </div>
       </div>
