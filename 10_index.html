@@ -24,6 +24,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css" rel="stylesheet" >
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
 
   <!-- =======================================================
   * Template Name: MyPortfolio - v4.9.0
@@ -72,87 +76,186 @@
 
    <main id="main">
 
-    <section class="section">
+  <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>10: machine building and end effectors</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>This week's assignment was to make a machine that includes at least one stepper motor and to demonstrate that the motor position is calibrated each time you turn it on. I collaborated with <a href="https://rebeccabrand.github.io/ps-70-fall-22/week-10.html">Rebecca Brand</a>, since we used this brief as an opportunity to research and prototype a component of our final project, which will be a suminagashi (Japanese ink panting) machine. We decided to prototype the "x-axis arm" of our machine, which 
+            will eventually hold another motor-powered arm that will act as the "y-axis".</p>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Stepper Motor</h3>
+            <p>We started by playing with different stepper motors to understand how they work. Thinking it would be sufficient for our machine, we initially programmed the <a href="https://create.arduino.cc/projecthub/debanshudas23/getting-started-with-stepper-motor-28byj-48-3de8c9">28BYJ-48 stepper motor with a ULN2003 driver</a> to move back and forth and built a rectangular frame using 2040 alumninium extrusions with an x and y axis.
+            <p>However, we ended up finding a <a href="https://www.youtube.com/watch?v=XYqx5wg4oLU">tutorial for building a CNC drawing machine</a> that would become the inspirational framework for our project. Having initially thought we'd build a large rectangular frame similar to Suvin's machine, we found this approach to be more appropriate for our creative purposes. In this example, they use NEMA 17 bipolar stepper motors for more power.</p>
+            <p>We plan to drip ink into a bed of water and place a piece of paper over it. This armature structure of this solution would allow one to place and remove the paper more easily without the frame getting in the way, as would've been the case with the rectangular frame. </p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="10_machine/stepper.gif" alt="Image" class="img-fluid">
+             <figcaption>28BYJ-48 stepper motor</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Building the arm</h3>
+            <p>In order to get the x-axis arm working mechanically, we performed research and collected the requisite materials, including toothed pulleys, timing belt, linear railing, a NEMA 17 motor, an A4988 driver and heat shield, and a 12V port and power source. Initially, we laser cut and 3D-printed linear railing parts, but ended up getting the metal piece in the mail on time.</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="10_machine/railing-acrylic.jpg" alt="Image" class="img-fluid">
+             <figcaption>Laser cut acrylic railing + 3D printed block</figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="10_machine/railing-steel.jpg" alt="Image" class="img-fluid">
+             <figcaption>300mm MGN12 linear rail guide with MGN12H block</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">    
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             We also 3D-printed two base ends - one idle and one that will house the motor - as well as a raft mount for the y-axis.    Although we anticipate the raft mount dimensions changing, it was a helpful exercise in understanding how the mount will sit upon and be powered by the first stepper motor. </p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="10_machine/materials.jpg" alt="Image" class="img-fluid">
+             <figcaption>SOME 3D-PRINTED PARTS AND OTHER TOOLS</figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="10_machine/x-axis-mockup.gif" alt="Image" class="img-fluid">
+             <figcaption>MOVING THE TIMING BELT AND RAFT MOUNT MANUALLY</figcaption>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Bipolar Stepper Motor Setup</h3>
+            <p>After constructing the arm and manually maneuvering the timing belt to ensure the setup actually functions, we set up the stepper motor circuit to validate it would work with the stepper motor as well. We also had to solder a 12V power source plug to the power and ground wires that would plug into the breadboard.</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <video width="600" controls>
+               <source src="10_machine/x-axis-motor.mp4" type="video/mp4">
+             </video>
+             <figcaption>STEPPER MOTOR MOVES CLOCKWISE, PAUSES, THEN MOVES COUNTERCLOCKWISE.</figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="10_machine/stepper_driver_schematic.jpeg" alt="Image" class="img-fluid">
+            <figcaption>SCHEMATIC INCLUDING THE 12V POWER SOURCE, CAPACITOR, AND A4988 DRIVER.</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Adding the limit switch</h3>
+            <p>Once we validated that the motor could move the mount properly, we soldered the limit switch to power and ground wires and affixed it to the right edge of the mount, where it would hit the base and trigger the direction change.</p>
+            <p>We adapted different Arduino code snippets online to program the mount. Every time it starts up, the motor spins clockwise and the mount moves to the right until it the limit switch is triggered; this brings the mount back to its "home" position or origin. After the limit switch is triggered, the motor then moves counterclockwise and the mount moves to the left. In upcoming weeks, we will program the motor to complete a suminagashi design before stopping.</p>
+             </p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <video width="600" controls>
+               <source src="10_machine/limit-switch.mp4" type="video/mp4">
+             </video>
+             <figcaption>STEPPER MOTOR ACCELERATES, HITS LIMIT SWITCH, PAUSES, AND CHANGES DIRECTION.</figcaption>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="10_machine/x-axis-arm.jpg" alt="Image" class="img-fluid">
+            <figcaption>SX-AXIS ARM SYSTEM AND ELECTRONIC PARTS.</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <b>ARDUINO CODE</b>
+            <pre><code class="language-arduino hljs">
+#include "ezButton.h"
+#include "AccelStepper.h"
+
+// Define pin connections
+const int dirPin = 2;
+const int stepPin = 3;
+
+// Define motor interface type
+#define motorInterfaceType 1
+
+#define DIRECTION_CCW 1
+#define DIRECTION_CW  -1
+
+
+#define MAX_POSITION 0x7FFFFFFF // maximum of position we can set (long type)
+
+ezButton limitSwitch(7); // create ezButton object that attach to pin A0;
+
+AccelStepper stepper(motorInterfaceType, stepPin, dirPin);
+
+int direction  = DIRECTION_CW;
+long targetPos = 0;
+
+void setup() {
+  Serial.begin(9600);
+
+  limitSwitch.setDebounceTime(50); // set debounce time to 50 milliseconds
+
+  stepper.setMaxSpeed(1000);   // set the maximum speed
+  stepper.setAcceleration(100); // set acceleration
+  stepper.setSpeed(300);         // set initial speed
+  stepper.setCurrentPosition(0); // set position
+
+  targetPos = direction * MAX_POSITION;
+  stepper.moveTo(targetPos);
+}
+
+void loop() {
+  limitSwitch.loop(); // MUST call the loop() function first
+
+  if (limitSwitch.isPressed()) {
+    Serial.println(F("The limit switch: TOUCHED"));
+    direction *= -1; // change direction
+    Serial.print(F("The direction -> "));
+    if (direction == DIRECTION_CW)
+      Serial.println(F("CLOCKWISE"));
+    else
+      Serial.println(F("ANTI-CLOCKWISE"));
+
+    targetPos = direction * MAX_POSITION;
+    stepper.setCurrentPosition(0); // set position
+    stepper.moveTo(targetPos);
+  }
+
+  // without this part, the move will stop after reaching maximum position
+  if (stepper.distanceToGo() == 0) { // if motor moved to the maximum position
+    stepper.setCurrentPosition(0);   // reset position to 0
+    stepper.moveTo(targetPos);       // move the motor to maximum position again
+  }
+
+  stepper.run(); // MUST be called in loop() function
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+
 
   </main><!-- End #main -->
   
