@@ -24,6 +24,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css" rel="stylesheet" >
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
 
   <!-- =======================================================
   * Template Name: MyPortfolio - v4.9.0
@@ -72,87 +76,76 @@
 
    <main id="main">
 
-    <section class="section">
+  <section class="section">
       <div class="container">
         <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50">
+            <h2>11: computer programming</h2>
           </div>
         </div>
       </div>
 
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Boxed Water</h3>
-                <p class="mb-4"><span class="text-muted">Design</span></p>
-
-                <div class="mb-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
-                    illum unde pariatur, enim tempora.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Design</li>
-                  <li>HTML5/CSS3</li>
-                  <li>CMS</li>
-                  <li>Logo</li>
-                </ul>
-
-                <p><a href="#" class="readmore">Visit Website</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>This week's assignment was to work on the most challenging aspect of our final project and create an MVP. For us, this was figuring up the Y and Z axis of our machine. We didn't end up doing any computer programming (despite the name of this week) as we had to get the mechanics down before programming the parts to move.</p>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Testing the ink</h3>
+            <p></p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="" alt="Image" class="img-fluid">
+             <figcaption>28BYJ-48 stepper motor</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Building the y-axis arm</h3>
+            <p>We started by prototyping the y-axis with just one brush holder. The brush is meant to be inserted into the triangular-shaped pen slider component at the front and secured using the orange finger dials. One timing belt will be connected directly to the pen holder (the larger main yellow component); the y-axis will be controlled using the stepper motor located in the raft mount (the middle green component). Another timing belt will be attached to the pen slider and controlled using a micro servo (located on the other end of the rod).</p>
+            <p>Since we were missing a few bearings and rods, we weren't able to complete the prototype. However, it was still very helpful to set this up as we realized we had to make a few adjustments such as:
+              <li>shortening the rods to make the structure more secure</li>
+              <li>finding a better way to secure the linear rail to the two black base pieces - when the rod moved in the y-axis direction, the linear rail would rock back and forth, leading to unintentional changes in the z-height of the brush.</li>
+            </p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/Thumbnail.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Modelling the pen holder</h3>
+            <p>Since we need our machine to be able to hold two brushes, we started thinking about how we could incorporate this into the y-axis arm. We considered replaing the pen slider with a rotating part that could hold both brushes. We could control the rotation to dip one brush into the water bed at a time. However, we realized that this may be difficult to calibrate because the brush might move the ink as it moves in/out of the water, which wouldn't create the desired effect.</p>
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/sketch1.jpg" alt="Image" class="img-fluid">
+        </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/sketch2.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>Ultimately, instead of modifying the pen slider, I decided to add another pen holder directly to the existing y-axis pen holder. I created two versions: one with stacked two pen holder components (left) and one with two side-by-side pen holders (right).</p>
+          </div>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/ypen_models.png" alt="Image" class="img-fluid">
+        </div>
+      </div>
+
 
   </main><!-- End #main -->
   
