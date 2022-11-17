@@ -88,7 +88,28 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p>This week's assignment was to work on the most challenging aspect of our final project and create an MVP. For us, this was figuring up the Y and Z axis of our machine. We didn't end up doing any computer programming (despite the name of this week) as we had to get the mechanics down before programming the parts to move.</p>
+            <p>This week's assignment was to work on the most challenging aspect of our final project and create an MVP. Since our project will utilize some open source CNC drawing machine tutorials for the x- and y-axis movements, we decided that our MVP needed to address how the machine would deposit the painting materials into the water. There is no precedent for a mechanically operated suminagashi machine, so this will be our novel addition to the catalogue of computer-aided drawing projects. We didn't end up doing any computer programming (despite the name of this week) as we had to get the mechanics down before programming the parts to move - but that will come soon!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h3 class="h3">Testing the ink</h3>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4 class="h4">A. Brushes</h4>
+            <p>We started by testing the ink using the traditional suminagashi method - using a brush.We decided to first try the traditional method of suminagashi, which requires alternating using a brush with ink-surfectant-water solution and a brush with sufectant solution. We angled the brushes and created several rings in the water before using the rice paper to transfer the design to its permanent setting. This was a fun exercise because we hadn't actually tried this painting method yet! So we learned a lot about how to mix the solutions, position the brushes, time the brush movements, and other ways to keep the entire process in sync.
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/paint_process.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/paint_result.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <center><img src="11_MVP/paper.jpg" alt="Image" class="img-fluid"></center>
           </div>
         </div>
       </div>
@@ -96,12 +117,36 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <h3 class="h3">Testing the ink</h3>
-            <p></p>
+            <h4 class="h4">B. Syringe</h4>
+            <p>Using a syringe was our initial idea in order to control how much solution could be deposited into the water during each print job. We developed a mechanism in <a href="09_index.html">Week 9</a> for a stepper motor to control the speed of a syringe pump. While this would be an interesting way to control liquid dispersal in small increments, it doesn't quite work for suminagashi. We think this is because the droplet size is too heavy or dense to float on top of the water; therefore, when the syringe drops the ink solution into the water, some of it makes a circle, but some of it sinks into the water itself. </p></p>
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-             <img src="" alt="Image" class="img-fluid">
-             <figcaption>28BYJ-48 stepper motor</figcaption>
+             <img src="11_MVP/syringe.gif" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4 class="h4">C. Tubes</h4>
+            <p>Our final test used some tubing in the makerspace, though somewhat unsuccessfully. Nathan had recommended this method because it wouldn't be too difficult to set up a motorized pump system to highly control the liquid dispersal and avoid too muncy armature associated with the brushes or syringes. Since we haven't built a mechanism to pump liquid through the tube, we used a syringe to insert some of the ink and pinched the tubing so that the ink wouldn't flow immediately. Then, we released the pressure and let the ink drip into the water, which had a similar effect to the syringe. There was also a lot of air trapped in the tube that made it difficult to get all the ink out swiftly.</p></p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <img src="11_MVP/tube_process_1.gif" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">     
+            <img src="11_MVP/tube_process_2.gif" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <h4 class="h4">Conclusion</h4>
+            <p>Ater performing these tests, we decided that the most elegant and effective way to perform this process is to maintain the integrity of the original art form with brushes. Therefore, we are modeling a couple versions of brush holders than can attach to the y-axis of our machine. This will likely be the largest challenge of our project, since there are many precedents for building the x- and y-axis mechanisms of CNC drawing machines. We're exploring one option to have micro servo motors operate each brush next to one another and another option to have one micro servo rotating the 2 brushes to hit the water at different times. </p>
+            <p>Once these mechanics are ironed out, we will decide how to provide input data to the machine to influence how many rings the brushes make, how long the brushes stay in the water, and other potential decisions that will influence the printmaking process.</p>
           </div>
         </div>
       </div>
@@ -117,7 +162,7 @@
             </p>
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-             <img src="11_MVP/Thumbnail.jpg" alt="Image" class="img-fluid">
+             <img src="11_MVP/yaxis.jpg" alt="Image" class="img-fluid">
         </div>
       </div>
 
@@ -125,8 +170,8 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <h3 class="h3">Modelling the pen holder</h3>
-            <p>Since we need our machine to be able to hold two brushes, we started thinking about how we could incorporate this into the y-axis arm. We considered replaing the pen slider with a rotating part that could hold both brushes. We could control the rotation to dip one brush into the water bed at a time. However, we realized that this may be difficult to calibrate because the brush might move the ink as it moves in/out of the water, which wouldn't create the desired effect.</p>
+            <h3 class="h3">Re-modelling the pen holder + pen slider</h3>
+            <p>Since we need our machine to be able to hold two brushes, we started thinking about how we could incorporate this into the y-axis arm. We considered replacing the pen slider with a rotating part that could hold both brushes. We could control the rotation to dip one brush into the water bed at a time. However, we realized that this may be difficult to calibrate because the brush might move the ink as it moves in/out of the water, which wouldn't create the desired effect.</p>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
              <img src="11_MVP/sketch1.jpg" alt="Image" class="img-fluid">
@@ -139,7 +184,7 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p>Ultimately, instead of modifying the pen slider, I decided to add another pen holder directly to the existing y-axis pen holder. I created two versions: one with stacked two pen holder components (left) and one with two side-by-side pen holders (right).</p>
+            <p>Ultimately, instead of modifying the pen slider, I decided to add another pen holder directly to the existing y-axis pen holder. I created two versions: one with stacked two pen holder components (left) and one with two side-by-side pen holders (right). At the moment of doing this writeup, these models are being printed (and reprinted...) but stay tuned for updates!</p>
           </div>
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
              <img src="11_MVP/ypen_models.png" alt="Image" class="img-fluid">
