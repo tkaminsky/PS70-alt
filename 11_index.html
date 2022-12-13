@@ -88,7 +88,7 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p>This week's assignment was to work on the most challenging aspect of our final project and create an MVP. Since our project will utilize some open source CNC drawing machine tutorials for the x- and y-axis movements, we decided that our MVP needed to address how the machine would deposit the painting materials into the water. There is no precedent for a mechanically operated suminagashi machine, so this will be our novel addition to the catalogue of computer-aided drawing projects. We didn't end up doing any computer programming (despite the name of this week) as we had to get the mechanics down before programming the parts to move - but that will come soon!</p>
+            <p>This week's assignment was to work on the most challenging aspect of our final project and create an MVP. Since our project will utilize some obrush source CNC drawing machine tutorials for the x- and y-axis movements, we decided that our MVP needed to address how the machine would deposit the painting materials into the water. There is no precedent for a mechanically operated suminagashi machine, so this will be our novel addition to the catalogue of computer-aided drawing projects. We didn't end up doing any computer programming (despite the name of this week) as we had to get the mechanics down before programming the parts to move - but that will come soon!</p>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
             <h4 class="h4">A. Brushes</h4>
-            <p>We started by testing the ink using the traditional suminagashi method - using a brush.We decided to first try the traditional method of suminagashi, which requires alternating using a brush with ink-surfectant-water solution and a brush with sufectant solution. We angled the brushes and created several rings in the water before using the rice paper to transfer the design to its permanent setting. This was a fun exercise because we hadn't actually tried this painting method yet! So we learned a lot about how to mix the solutions, position the brushes, time the brush movements, and other ways to keep the entire process in sync.
+            <p>We started by testing the ink using the traditional suminagashi method - using a brush.We decided to first try the traditional method of suminagashi, which requires alternating using a brush with ink-surfectant-water solution and a brush with sufectant solution. We angled the brushes and created several rings in the water before using the rice paper to transfer the design to its permanent setting. This was a fun exercise because we hadn't actually tried this painting method yet! So we learned a lot about how to mix the solutions, position the brushes, time the brush movements, and other ways to keep the entire process in sync.</p>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
              <img src="11_MVP/paint_process.gif" alt="Image" class="img-fluid">
@@ -155,7 +155,7 @@
         <div class="row mb-5 align-items-center">
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
             <h3 class="h3">Building the y-axis arm</h3>
-            <p>We started by prototyping the y-axis with just one brush holder. The brush is meant to be inserted into the triangular-shaped pen slider component at the front and secured using the orange finger dials. One timing belt will be connected directly to the pen holder (the larger main yellow component); the y-axis will be controlled using the stepper motor located in the raft mount (the middle green component). Another timing belt will be attached to the pen slider and controlled using a micro servo (located on the other end of the rod).</p>
+            <p>We started by prototyping the y-axis with just one brush holder. The brush is meant to be inserted into the triangular-shaped brush slider component at the front and secured using the orange finger dials. One timing belt will be connected directly to the brush holder (the larger main yellow component); the y-axis will be controlled using the stepper motor located in the raft mount (the middle green component). Another timing belt will be attached to the brush slider and controlled using a micro servo (located on the other end of the rod).</p>
             <p>Since we were missing a few bearings and rods, we weren't able to complete the prototype. However, it was still very helpful to set this up as we realized we had to make a few adjustments such as:
               <li>shortening the rods to make the structure more secure</li>
               <li>finding a better way to secure the linear rail to the two black base pieces - when the rod moved in the y-axis direction, the linear rail would rock back and forth, leading to unintentional changes in the z-height of the brush.</li>
@@ -170,8 +170,8 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <h3 class="h3">Re-modelling the pen holder + pen slider</h3>
-            <p>Since we need our machine to be able to hold two brushes, we started thinking about how we could incorporate this into the y-axis arm. We considered replacing the pen slider with a rotating part that could hold both brushes. We could control the rotation to dip one brush into the water bed at a time. However, we realized that this may be difficult to calibrate because the brush might move the ink as it moves in/out of the water, which wouldn't create the desired effect.</p>
+            <h3 class="h3">Re-modelling the brush holder + brush slider</h3>
+            <p>Since we need our machine to be able to hold two brushes, we started thinking about how we could incorporate this into the y-axis arm. We considered replacing the brush slider with a rotating part that could hold both brushes. We could control the rotation to dip one brush into the water bed at a time. However, we realized that this may be difficult to calibrate because the brush might move the ink as it moves in/out of the water, which wouldn't create the desired effect.</p>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
              <img src="11_MVP/sketch1.jpg" alt="Image" class="img-fluid">
@@ -184,13 +184,53 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-            <p>Ultimately, instead of modifying the pen slider, I decided to add another pen holder directly to the existing y-axis pen holder. I created two versions: one with stacked two pen holder components (left) and one with two side-by-side pen holders (right). At the moment of doing this writeup, these models are being printed (and reprinted...) but stay tuned for updates!</p>
+            <p>Ultimately, instead of modifying the brush slider, I decided to add another brush holder directly to the existing y-axis brush holder. I created two versions: one with stacked two brush holder components (left) and one with two side-by-side brush holders (right).</p>
           </div>
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
-             <img src="11_MVP/ypen_models.png" alt="Image" class="img-fluid">
+             <img src="11_MVP/ybrush_models.png" alt="Image" class="img-fluid">
         </div>
       </div>
 
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/ybrush_3Dprints.JPG" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+            <p>After 3D printing and testing the brush sliders, we decided to go with the side-by-side version to minimize machine movement when it alternates between each brush.</p> 
+            <p>When we tried to put the brush holders into the brush slider, we realized that there wasn't enough space between the two slots on the brush slider to fit 2 brush holders. So, I sized down the brush holder. I also remodelled the servo motor holder to fit 2 servos to control the z-height of the two brush holders.</p> 
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/brushholder_test1.jpeg" alt="Image" class="img-fluid">
+             <figcaption>Brush fits in the brushholder!</figcaption>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/brushholder_test2.jpeg" alt="Image" class="img-fluid">
+             <figcaption>Brush holders were too large to fit side by side</figcaption>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/brushholder_test3.jpeg" alt="Image" class="img-fluid">
+             <figcaption>Remodelled brush holder to fit onto the brush slider</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/3models1.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50" data-aos-delay="50">
+             <img src="11_MVP/3dmodels2.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
 
   </main><!-- End #main -->
   
